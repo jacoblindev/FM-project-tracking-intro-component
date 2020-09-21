@@ -22,9 +22,46 @@ body {
     font-family: "Barlow", sans-serif;
 }
 
+body::after {
+    content: "";
+    display: block; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48vw;
+    height: 50vh;
+    background-color: var(--Light-Grayish-Blue);
+    border-radius: 0 0 0 80px;
+    z-index: -1;
+}
+
 h1, h2, h3, h4, h5, h6,
 .CTA, Nav {
     font-family: "Barlow Condensed", sans-serif;
 }
+
+
+
+/* Footer Section */
+footer {
+    background-color: #000;
+    height: 6vh;
+}
+
+.attribution {
+    font-size: 0.8rem;
+    text-align: center;
+    color: white;
+    line-height: 6vh;
+}
+
+.attribution a {
+    color: hsl(228, 100%, 75%);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Mobile Version */
+@media screen and (max-width: 375px){}
 
 
