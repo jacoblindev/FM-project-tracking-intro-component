@@ -20,6 +20,7 @@
 
 body {
     font-family: "Barlow", sans-serif;
+    overflow: hidden;
 }
 
 body::before {
@@ -28,7 +29,7 @@ body::before {
     position: absolute;
     top: 0;
     right: 0;
-    width: 48vw;
+    width: 50vw;
     height: 50vh;
     background-color: var(--Light-Grayish-Blue);
     border-radius: 0 0 0 80px;
@@ -42,13 +43,13 @@ h4,
 h5,
 h6,
 .CTA,
+.PRE,
 nav {
     font-family: "Barlow Condensed", sans-serif;
 }
 
 /* Header Section */
-header,
-main {
+header {
     width: 80%;
     margin: 3.2em auto;
 }
@@ -78,8 +79,10 @@ nav a {
     letter-spacing: 0.1rem;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     text-decoration: underline;
+    outline: none;
 }
 
 nav ul li:last-of-type a {
@@ -97,13 +100,79 @@ nav ul li:nth-of-type(4) {
 }
 
 /* Main Section */
-#hero {
+main {
+    width: 80%;
+    margin: 6em auto;
+}
+
+#hero,
+#hero-img {
     width: 50%;
 }
 
-#hero-img img{
-    height: 90%;
+#hero h4,
+#hero h1,
+#hero a {
+    text-transform: uppercase;
+    text-decoration: none;
 }
+
+h4 {
+    color: var(--Grayish-Blue);
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    font-size: 0.85em;
+    margin-bottom: 1.5rem;
+}
+
+h4 span {
+    background-color: var(--Very-Dark-Blue);
+    color: white;
+    width: 50px;
+    height: 25px;
+    border-radius: 15px;
+    padding: 0.2em 0.8em;
+    letter-spacing: normal;
+    margin-right: 1em;
+}
+
+h1 {
+    font-size: 3.5em;
+    color: var(--Very-Dark-Blue);
+    line-height: 1em;
+    margin-bottom: 2rem;
+}
+
+#hero p {
+    width: 50%;
+    color: var(--Dark-Grayish-Blue);
+    margin-bottom: 3.5rem;
+}
+
+.CTA {
+    background-color: var(--Primary-Red);
+    color: white;
+    font-weight: 700;
+    padding: 0.9em 2em;
+    border-radius: 5px;
+    letter-spacing: 0.1rem;
+    font-size: 0.85em;
+}
+
+.CTA:hover,
+.CTA:focus {
+    opacity: 0.8;
+}
+
+.PRE {
+    color: var(--Grayish-Blue);
+    font-weight: 700;
+    padding: 0.85em 2em;
+    letter-spacing: 0.2rem;
+    font-size: 0.85em;
+    font-weight: 400;
+}
+
 
 /* Footer Section */
 footer {
