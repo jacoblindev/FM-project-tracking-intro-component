@@ -99,6 +99,27 @@ nav ul li:nth-of-type(4) {
     opacity: 0.5;
 }
 
+#Burger-Menu {
+    display: none;
+    width: 25px;
+    height: 25px;
+    background-image: url(./images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    appearance: none;
+}
+
+#Burger-Menu:hover,
+#Burger-Menu:focus {
+    cursor: pointer;
+    outline: none;
+}
+
+#Burger-Menu:checked {
+    background-image: url(./images/icon-close.svg);
+}
+
 /* Main Section */
 main {
     width: 80%;
@@ -195,4 +216,51 @@ footer {
 
 /* Mobile Version */
 @media screen and (max-width: 375px) {
+    /* Nav Section */
+    header {
+        margin: 2em auto;
+    }
+
+    #Burger-Menu {
+        display: block;
+    }
+
+    #Burger-Menu + ul {
+        display: none;
+    }
+
+    #Burger-Menu:checked + ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        width: 80%;
+        height: 30vh;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0px 5px 15px -5px grey;
+        top: 5em;
+        left: 10%;
+    }
+
+    #Burger-Menu:checked + ul li {
+        margin: 0;
+    }
+
+    #Burger-Menu:checked + ul li:nth-of-type(4) {
+        width: 80%;
+        height: 1px;
+        border-radius: 0;
+    }
+      
+    /* Footer Section */
+    footer {
+        height: 8vh;
+    }
+    
+    .attribution {
+        font-size: 0.7rem;
+        line-height: 8vh;
+    }
 }
